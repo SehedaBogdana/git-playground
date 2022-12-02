@@ -48,6 +48,10 @@ while not is_game_over():
         continue
 
     if guess in full_list:
+        if guess == guesses:
+            print("no")
+            continue
+
         guessed += 1
         guesses.append(guess)
         if guessed == WORDS_TO_WIN:
